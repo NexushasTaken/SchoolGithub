@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello, World</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-            height: 100vh;
-            margin: 0px;
-        }
+        height: 100vh;
+        margin: 0px;
+      }
+
+      .text {
+        overflow: hidden;
+        text-wrap: nowrap;
+        padding: 0px;
+        border-right: 2px solid black;
+        animation: typing 1s forwards, caret 0.5s linear infinite;
+        font-size: 1.6rem;
+        width: 0%;
+      }
+
+      @keyframes typing {
+        from { width: 0%; }
+        to { width: 100%; }
+      }
+      @keyframes caret {
+        from, to { border-right-color: transparent; }
+        40%, 60% { border-right-color: black; }
+
+      }
     </style>
-</head>
-<body>
-    <h1>Hello, World</h1>
-</body>
+  </head>
+  <body>
+    <h1 clsss="wrapper">
+      <div class="text">Hello, World</div>
+    </h1>
+  </body>
 </html>
+<!--  -->
